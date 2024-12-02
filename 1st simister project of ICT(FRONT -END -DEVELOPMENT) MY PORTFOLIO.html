@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+   
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <style type="text/css">
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+   
+    color:#ededed;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: centre;
+    z-index: 100;
+
+}
+.LOGO{
+    position: relative;
+    font-size: 30px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+.LOGO::before {
+    content: ' ';
+    position: absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background:#00abf0;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+
+}
+
+.navbar a{
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 35px;
+    transition: 4s;
+}
+
+.navbar a:hover,
+.navbar a:active
+{
+    color: #00abf0;
+    
+    }
+ .home{
+    height: 100vh;
+     background: url('https://i.pinimg.com/736x/ed/22/ab/ed22ab9cdd0fbc2ed1bbd2313e1372aa.jpg')no-repeat;
+     background-size: cover;
+     background-position:  center; 
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+ }   
+
+ .home-content{
+    max-width: 600px;
+ }
+ .home-content h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+ }
+
+ .home-content h1::before {
+    content: ' ';
+    position: absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background:#00abf0;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+
+}
+ .home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    color:#00abf0;
+ }
+ 
+ .home-content p{
+
+    font-size: 16px;
+    margin: 20px 0 40px;
+ }
+ 
+
+ 
+
+ .home-content .btn-box{
+   
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    
+ }
+ 
+
+ .btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:150px;
+    height: 100%;
+    background:#00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color:#081B29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+ }
+
+ .btn-box a:hover{
+    color:#00abf0;
+ }
+  .btn-box a:nth-child(2){
+    background: transparent;
+    color:#00abf0;
+  }
+
+  .btn-box a:nth-child(2):hover{
+    color:#081B29;
+  }
+  .btn-box a:nth-child(2)::before{
+    background: #00abf0;
+  }
+ .btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:#081B29;
+    z-index: -1;
+    transition: .5s;
+ }
+
+ .btn-box a:hover::before{
+    width: 100%;
+ }
+ .home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+
+ }
+ .home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:40px;
+    height:40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transform: .5s;
+
+ }
+ .home-sci a:hover{
+    color:#081B29
+ }
+ .home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width:0;
+    height:100%;
+    background:#00abf0;
+    z-index: -1;
+    transition: .5s;
+    
+ }
+ .home-sci a:hover::before{
+    width:100%;
+
+ }
+
+ /* key frames animation */
+@keyframes showRight{
+    100%{
+        width:0;
+    }
+
+}
+.DownloadPortfolio{
+    margin-left: 35px;
+
+}
+.Heading{
+    
+    position: relative;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    background:#141c20;
+    border: 6px solid #00abf0;
+    border-radius: 2000px;
+    font-size: 30px;
+    color:#ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.Heading:hover{
+    background-color: #00abf0;
+    
+    }
+
+.Servicescontainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap:4rem;
+    
+   
+    font-size: 16px;
+    color:#ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.Servicescontainer .services-box{
+    padding: 3rem 3rem;
+    background:rgb(29, 43, 47);
+    border: 3rem solid var(--second-bg-color);
+    border-radius: 1.5rem;
+    transition: .5s;
+   
+
+}
+.Servicescontainer .services-box:hover{
+    border-color: #00abf0;
+    transform:scale(1.02);
+}
+.Servicescontainer .icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.services-box .icon i{
+    font-size: 4.5rem;
+transition: .5s;
+}
+.services-box :hover.icon :not(a i){
+    color:#00abf0;
+
+}
+
+.services-box .icon a{
+    display: inline-flex;
+    background-color:#ededed;
+    border-radius: 50%;
+    padding:1rem;
+    transition: .5s;
+}
+.services-box:hover .icon a{
+    background-color: #00abf0;
+}
+
+
+.services-box .icon a i {
+    font-size: 2rem;
+    color:var(--bg-color);
+    transform: rotate(225deg);
+}
+.services-box .icon a i:hover{
+    transform: rotate(180deg);
+}
+.services-box h3{
+    font-size: 1.7rem;
+    margin: .5rem 0 2rem
+    transition:.5s
+}
+.services-box:hover h3{
+    color:#00abf0
+}
+.services-box p{
+    font-size: 1.2rem;
+    
+}
+.Services{
+    background-color: #141c20;
+}
+
+.services-box img{
+    padding: 3rem 3rem;
+    background:rgb(29, 43, 47);
+    border: 3rem solid var(--second-bg-color);
+    border-radius: 1.5rem;
+    padding right: 2px 2px;
+    margin-right: 2px 2px;
+    margin-top: 3px 3px;
+    margin-bottom: 3px 3px;
+    margin-left: 2px;
+    height: 300px;
+    width: 300px;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction:column ;
+    
+   
+    gap: 2rem;
+    background-color: #141c20;
+    color: #ededed;
+}
+.contact-container .contact-box : :first-child{
+    align-self: centre;
+}
+.contact-box h2{
+    font-size: 3rem;
+}
+.contact-box p{
+    font-size: 1rem;
+}
+.contact-box .desc{
+    margin:1.5rem 0 2.5rem;
+}
+.contact-box .contact-details{
+    padding:3rem 3rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin:2rem 0;
+}
+.contact-details i{
+    
+    grid-template-columns: 1fr 1.3fr;
+    background-color: #141c20;
+    color: #ededed;
+    font-size: 2rem;
+    
+    border-radius: .6rem;
+    
+}
+.contact-details .detail p:first-child{
+    color:#00abf0;
+}
+.contact-box form{
+    
+    background:#30444e ;
+    padding: 2.5rem 3.5rem 3.5rem;
+    border-radius: 1rem;
+    text-align: center;
+
+
+}
+.contact-box .heading{
+    font-size: 3.5rem;
+}
+.contact-box .feildbox{
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    gap: 2rem;
+}
+.contact-box .feildbox textarea{
+    padding: 1.5rem;
+    background-color: #000000;
+    border:.15rem solid var(--bg-color);
+    border-radius: 1.6rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+.contact-box .feildbox textarea{
+    grid-column: 1/-1;
+    height: 26rem;
+    resize: none;
+}
+.contact-box .feildbox  input:focus,
+.contact-box .feildbox textarea:focus{
+    border-color:#00abf0
+}
+.contact-box .contact-main{
+    display: flex;
+   justify-content: space-between ;
+
+}
+.margin-left-6 {
+    margin-left: 6rem;
+}
+    </style>
+    <!-- home part1 -->
+    <header class="header">
+        <a href="#" class="LOGO">AHMAD PORTFOLIO</a>
+        
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>          
+        </nav>
+    </header>
+<section  class="home">
+    <div class="home-content">
+        <h1>Hi i am Ahmadhassan </h1>
+        <h3>Graphic designer</h3><br>
+        <p>"Hello, my name is Ahmad hassan, and I’m a graphic designer with 3years of experience creating impactful designs for companies and brands. My expertise lies in mention specific skills, like branding, web design, illustration, or motion graphics and I’ve worked on many  projects".</p>
+
+         
+            <div class="home-sci">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+            </div>     
+            </p>
+    </div>
+    <span class="home-imgHover"></span>
+
+    <!-- My services part2 -->
+</section>
+  <section class="services">
+    <div class="Services">
+        <h2 class="Heading">Myservices </h2>
+        <div class="Servicescontainer">
+            <div class="services-box">
+             <div class="icon">
+                <i class='bx bxl-sketch' ></i>
+                <a href="#"><i class='bx bx-arrow-back' ></i></a>
+             </div>   
+             <h3>Graphic Designing</h3>
+             <p>A Graphic Designer is an artist who creates visual text and imageryThey design creative content for online campaigns, print ads, websites, and even videos1.!</p>
+            </div>
+
+            <div class="services-box">
+                <div class="icon">
+                    <i class='bx bx-code-alt' ></i>
+                   <a href="#"><i class='bx bx-arrow-back' ></i></a>
+                </div>   
+                <h3>Web Development</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nesciunt nihil dolor aperiam, mollitia quis impedit quia suscipit adipisci sequi. !</p>
+               </div>
+               <div class="services-box">
+                <div class="icon">
+                    <i class='bx bxs-building' ></i>
+                   <a href="#"><i class='bx bx-arrow-back' ></i></a>
+                </div>   
+                <h3>UI\UXDesign</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nesciunt nihil dolor aperiam, mollitia quis impedit quia suscipit adipisci sequi.!</p>
+               </div>
+               <div class="services-box">
+                <div class="icon">
+                    <i class='bx bxl-youtube' ></i>
+                   <a href="#"><i class='bx bx-arrow-back' ></i></a>
+                </div>   
+                <h3>youtuber</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nesciunt nihil dolor aperiam, mollitia quis impedit quia suscipit adipisci sequi. !</p>
+               </div>
+
+               <div class="services-box">
+                <div class="icon">
+                    <i class='bx bx-camera' ></i>
+                   <a href="#"><i class='bx bx-arrow-back' ></i></a>
+                </div>   
+                <h3>Pohtography</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nesciunt nihil dolor aperiam, mollitia quis impedit quia suscipit adipisci sequi.!</p>
+               </div>
+
+               <div class="services-box">
+                <div class="icon">
+                    <i class='bx bxs-movie' ></i>
+                   <a href="#"><i class='bx bx-arrow-back' ></i></a>
+                </div>   
+                <h3>Vedio editing</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nesciunt nihil dolor aperiam, mollitia quis impedit quia suscipit adipisci sequi. !</p>
+               </div>          
+        </div>
+        <span class="about-imgHover"></span>
+  </section>
+<!-- 3par(portfolio); -->
+
+<section class="services">
+    <div class="Services">
+        <h2 class="Heading"> MY Portfolio </h2>
+        <div class="Servicescontainer">
+            <div class="services-box">
+             <div class="icon">
+               
+                
+             </div>   
+             <h3>Digital Designing</h3>
+            <img src="https://tse3.mm.bing.net/th?id=OIP.FdKpARNWqQmptzr5oMKixgHaI4&pid=Api&P=0&h=180"alt="GD">
+            </div>
+
+            <div class="services-box">
+                <div class="icon">
+                   
+                  
+                </div>   
+                <h3>Minimal Poster</h3>
+                <img src="https://sp.yimg.com/ib/th?id=OPEC.eggPmcyiW9ityg474C474&o=5&pid=21.1&w=160&h=105"alt="GD">
+            </div>
+               <div class="services-box">
+                <div class="icon">
+                    
+
+                </div>   
+                <h3>Car poster</h3>
+                <img src="https://tse1.mm.bing.net/th?id=OIP.Ts7To23Fo73fjmKwpHaKvAHaFj&pid=Api&P=0&h=180"alt="GD">
+               </div>
+               <div class="services-box">
+                <div class="icon">
+                    
+                  
+                </div>   
+                <h3>Home Poster</h3>
+               <img src="https://tse3.mm.bing.net/th?id=OIP.aXoZWz8t7-NLCLV5JU3x0gHaJg&pid=Api&P=0&h=180"alt="GD">
+               </div>
+               <div class="services-box">
+                <div class="icon">
+                   
+                  
+                </div>   
+                <h3>Bike poster</h3>
+               <img src="https://tse4.mm.bing.net/th?id=OIP.3GiddKfza69JqMUhm0pg_wHaHa&pid=Api&P=0&h=180"alt="GD">
+               </div>
+               <div class="services-box">
+                <div class="icon">
+                    
+                   
+                </div>   
+                <h3>Watch poster</h3>
+            <img src="https://tse2.mm.bing.net/th?id=OIP.zCbD5W9_UiRocTrL3j3dNwHaJl&pid=Api&P=0&h=180"alt="GD">
+               </div>          
+        </div>
+        <span class="about-imgHover"></span>
+  </section>
+  <!-- contact section -->
+   
+  <section class="">
+    <div class="contact-container">
+        <div class="contact-box">
+            <h2 class="Heading"> Lets work together </h2>
+           <div class="contact-main">
+            <div class="contact-details">
+                <i class='bx bxs-phone'></i>
+                <div class="detail">
+                    <p>Phone</p>
+                    <p>(+92) 3199754342</p>
+                </div>
+        </div>
+        <div class="contact-details margin-left-6">
+            <i class='bx bx-envelope' ></i>
+            <div class="detail ">
+                <p>Email</p>
+                <p>ahmadhassan0376@gmail.com</p>
+            </div>
+
+    </div>
+    <div class="contact-details">
+        <i class='bx bx-map' ></i>
+        <div class="detail">
+            <p>Address</p>
+            <p>Islamabad(g-8)</p>
+        </div>
+        
+
+</div>
+
+           </div>
+
+    
+    </div>
+       <div class="contact-box">
+        <form action=" ">
+            <h2 class="heading">Contact Me!</h2>
+            <div class="feildbox">
+                <input type="text" placeholder="Full Name"required >
+                <input type="email" placeholder="Email Address"required >
+                <input type="text" placeholder="Phone Number"required >
+                <input type="text" placeholder="Email Subject"required >
+                <textarea name="your message"id="" placeholder="Your Message" required> </textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+            <div class="home-sci">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+            </div>     
+        </form>
+       </div>
+        
+  </section>
+
+
+
+  
+ 
+                
+</body>
+</html>
